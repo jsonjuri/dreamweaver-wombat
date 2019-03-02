@@ -1,0 +1,290 @@
+/* Dreamweaver's wombat scheme */
+@background : #242424;
+@foreground: #dddddd;
+@comments: #808080;
+@selectbg: #000000;
+@yellowish: #CAE682;
+@pinkish: #F08080;
+@purplish: #93A2CC;
+@creamish: #C4C4B7;
+@cyanish: #53DCCD;
+@lightblue: #8AC6F2;
+
+/* Basic editor styles */
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @selectbg;
+}
+
+&.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #767676;    
+    }
+}
+
+/* Colors */
+
+.cm-atom,
+.cm-hr,
+.cm-number
+{
+    color: @pinkish;
+}
+
+.cm-string,
+.cm-string2 {
+    color:@yellowish;
+} 
+
+.cm-qualifier,
+.cm-builtin,
+.cm-quote {
+    color: @purplish;
+}
+
+.cm-comment {
+    color: @comments;
+}
+
+.cm-operator {
+    color:@creamish;
+}
+
+.cm-attribute,
+.cm-def,
+.cm-property
+{
+    color:@yellowish;
+}
+
+.cm-tag {
+    color:@creamish;
+}
+
+.cm-variable,
+.cm-variable-2 {
+    color: @cyanish;
+}
+
+.cm-bracket {
+    color: @foreground;
+}
+
+.cm-keyword {
+    color:@creamish;
+}
+
+/* Original Wombatish colors */
+.cm-plus {
+    color: red;
+}
+
+.cm-meta {
+    color:#cc4e6a;
+}
+
+.cm-variable-3 {
+    color:#99FF00;
+}
+
+.cm-error,
+.cm-minus
+{
+    color: #dc322f;
+}
+
+.cm-header {
+    color: #d85896;
+}
+
+.cm-link {
+    color: #99FF00;
+    text-decoration: none;
+}
+
+.cm-rangeinfo {
+    color: #6c71c4;
+}
+
+/************************************************************************
+    Language specific colors
+************************************************************************/
+
+/* CSS */
+.cm-m-css {
+    &.cm-def,
+    &.cm-tag,
+    &.cm-variable,
+    &.cm-variable-2,
+    &.cm-variable-3
+    {
+        color: @purplish;
+    }
+    
+    &.cm-keyword
+    {
+        color: @pinkish;
+    }
+
+    &.cm-property {
+        color: @yellowish;
+    }
+}
+
+/* PHP */
+.cm-m-clike {
+    &.cm-variable {
+        color: @yellowish;
+    }
+
+    &.cm-variable-2 {
+        color: @purplish;
+    }
+    
+    &.cm-string {
+        color: @cyanish;
+    }
+    
+    &.cm-property {
+        color: @yellowish;
+    }
+}
+
+/* JAVASCRIPT */
+.cm-m-javascript {
+    &.cm-operator
+    {
+        color:@creamish;
+    }
+
+    &.cm-def {
+        color: @yellowish;
+    }
+    
+    &.cm-string {
+        color: @cyanish;
+    }
+    
+    &.cm-variable,
+    &.cm-variable-2
+    {
+        color: @yellowish;
+    }
+}
+
+/* HTML, XML */
+.cm-m-xml {  
+    &.cm-string {
+        color: @cyanish;
+    }
+    
+    &.cm-atom {
+        color: @purplish;
+    }
+}
+
+/* Extra CSS */
+
+.CodeMirror {
+    line-height: 1.1;
+}
+
+.CodeMirror-searching {
+    background-color: #d3cd69;
+    &.searching-current-match {
+        background-color: #ffff00;
+    }
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid #c5c8c6 !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: none;
+}
+
+.CodeMirror-linenumbers {
+    background:#333333;
+}
+.CodeMirror-linenumber {
+    color: #767676;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: #333f48;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: #444;
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    background-color: @selectbg;
+    color: white !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid #fff;
+}
+
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: transparent;
+        color: #767676;
+    }
+
+    .CodeMirror-activeline-background {
+        background: @selectbg;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+    }
+
+    .CodeMirror-matchingbracket, 
+    .CodeMirror-matchingtag {
+        text-decoration: none;
+    }
+}
+
+/* Non-editor styling */
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @foreground;
+}

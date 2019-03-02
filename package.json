@@ -1,0 +1,19 @@
+{
+    "name": "dreamweaver-wombat",
+    "title": "Dreamweaver Wombat",
+    "description": "Dreamweaver's wombat color scheme",
+    "homepage": "https://github.com/ignacionelson/dreamweaver-wombat",
+    "version": "1.0.2",
+    "author": "Ignacio Nelson (https://github.com/ignacionelson)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:ignacionelson/dreamweaver-wombat.git"
+    },
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme", "dark", "wombat", "dreamweaver", "brackets"]
+}
